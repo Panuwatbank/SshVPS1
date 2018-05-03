@@ -107,41 +107,21 @@ if [ -f "/usr/sbin/ufw" ] ; then
 	ufw allow 143/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8000/tcp ; ufw allow 8080/tcp
 fi
 if [ -d "/etc/squid3/" ]
-  cd /etc/squid3/
-  mv squid.conf squid.confbak
-  wget-q https://raw.githubusercontent.com/phanuwat3955/BankSSH/master/squid3.conf -O squid.conf
-  cd /$USER
-	grep -v "^Port 143" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
-	echo "Port 143" >> /etc/ssh/sshd_config
-	echo "Banner /etc/bannerssh" >> /etc/ssh/sshd_config
-	cd /etc/
-	wget -q https://raw.githubusercontent.com/phanuwat3955/BankSSH/master/bannerssh
-	cd /$USER
-    grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
-	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-  wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/addhost.sh -O / bin / addhost
-	chmod + x / bin / addhost
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/alterarsenha.sh -O / bin / alterarsenha
-	chmod + x / bin / alterarsenha
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/criarusuario2.sh -O / bin / criarusuario
-	chmod + x / bin / criarusuario
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/delhost.sh -O / bin / delhost
-	chmod + x / bin / delhost
-	wget https://raw.githubusercontent.com/phanuwat3955/wgt-bank/master/expcleaner2.sh -O / bin / expcleaner
-	chmod + x / bin / expcleaner
-	wget https://raw.githubuserercontent.com/phanuwat3955/wgt-bank/master/mudardata.sh -O / bin / mudardata
-	chmod + x / bin / mudardata
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/remover.sh -O / bin / remover
-	chmod + x / bin / remover
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/sshlimiter2.sh -O / bin / sshlimiter
-	chmod + x / bin / sshlimiter
-	wget https://raw.githubercatent.com/phanuwat3955/wgt-bank/master/alterarlimite.sh -O / bin / alterarlimite
-	chmod + x / bin / alterarlimite
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/ajuda.sh -O / bin / ajuda
-	chmod + x / bin / ajuda
-	wget https://raw.githubercencontent.com/phanuwat3955/wgt-bank/master/sshmonitor2.sh -O / bin / sshmonitor
-	chmod + x / bin / sshmonitor
-  tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""
+   cd /etc/squid3/
+   mv squid.conf squid.confbak
+      wget-q https://raw.githubusercontent.com/phanuwat3955/BankSSH/master/squid3.conf -O squid.conf
+   cd /$USER
+      grep -v "^Port 143" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
+      echo "Port 143" >> /etc/ssh/sshd_config
+      echo "Banner /etc/bannerssh" >> /etc/ssh/sshd_config
+      cd /etc/
+      wget -q https://raw.githubusercontent.com/phanuwat3955/BankSSH/master/bannerssh
+      cd /$USER
+      grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
+      echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+	service ssh restart
+	service squid3 restart
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""
     wget -q http://bigbolgames.com/viperx/squid/squidconf.sh -O /bin/squidconf
 	chmod +x /bin/squidconf
 	dos2unix /bin/squidconf
@@ -169,7 +149,7 @@ if [ -d "/etc/squid3/" ]
 	wget -q http://bigbolgames.com/viperx/sh/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
 	dos2unix /bin/sshlimiter
-    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo SSh Limiter Installed " ; tput sgr0 ; echo ""
+        tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo SSh Limiter Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
 	dos2unix /bin/alterarlimite
@@ -194,7 +174,7 @@ if [ -d "/etc/squid3/" ]
     wget -q http://bigbolgames.com/viperx/panel/usuarioteste.sh -O /bin/usuarioteste
 	chmod +x /bin/usuarioteste
 	dos2unix /bin/usuarioteste
-    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo User Temp Installed " ; tput sgr0 ; echo ""
+        tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo User Temp Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/panel/banner.sh -O /bin/banner
 	chmod +x /bin/banner
 	dos2unix /bin/banner
@@ -206,7 +186,7 @@ if [ -d "/etc/squid3/" ]
 	wget -q http://bigbolgames.com/viperx/panel/updatepack.sh -O /bin/updatepack
 	chmod +x /bin/updatepack
 	dos2unix /bin/updatepack
-    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Update Manager Installed " ; tput sgr0 ; echo ""
+        tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Update Manager Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/panel/firewallblock.sh -O /bin/firewallblock
 	chmod +x /bin/firewallblock
 	dos2unix /bin/firewallblock
@@ -280,25 +260,13 @@ if [ -d "/etc/squid3/" ]
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo HTOP Panel Instalado" ; tput sgr0 ; echo ""
 	panel
 	clear
-    wget -q http://bigbolgames.com/viperx/panel/viperx.sh -O /bin/viperx
+        wget -q http://bigbolgames.com/viperx/panel/viperx.sh -O /bin/viperx
 	chmod +x /bin/viperx
 	dos2unix /bin/viperx
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo ViperX Instalado " ; tput sgr0 ; echo ""
 	echo ""
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Por favor insira a senha para o usuario padrao do Proxy Auth " ; tput sgr0 ; echo ""
 	htpasswd -c /etc/squid3/passwd squid
-	if [ ! -f "/etc/init.d/squid3" ]
-	then
-		service squid3 reload > /dev/null
-	else
-		/etc/init.d/squid3 reload > /dev/null
-	fi
-	if [ ! -f "/etc/init.d/ssh" ]
-	then
-		service ssh reload > /dev/null
-	else
-		/etc/init.d/ssh reload > /dev/null
-	fi
 fi
 if [ -d "/etc/squid/" ]
 then
@@ -316,28 +284,8 @@ cd /etc/squid/
 	cd /$USER
     grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-  wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/addhost.sh -O / bin / addhost
-	chmod + x / bin / addhost
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/alterarsenha.sh -O / bin / alterarsenha
-	chmod + x / bin / alterarsenha
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/criarusuario2.sh -O / bin / criarusuario
-	chmod + x / bin / criarusuario
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/delhost.sh -O / bin / delhost
-	chmod + x / bin / delhost
-	wget https://raw.githubusercontent.com/phanuwat3955/wgt-bank/master/expcleaner2.sh -O / bin / expcleaner
-	chmod + x / bin / expcleaner
-	wget https://raw.githubuserercontent.com/phanuwat3955/wgt-bank/master/mudardata.sh -O / bin / mudardata
-	chmod + x / bin / mudardata
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/remover.sh -O / bin / remover
-	chmod + x / bin / remover
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/sshlimiter2.sh -O / bin / sshlimiter
-	chmod + x / bin / sshlimiter
-	wget https://raw.githubercatent.com/phanuwat3955/wgt-bank/master/alterarlimite.sh -O / bin / alterarlimite
-	chmod + x / bin / alterarlimite
-	wget https://raw.githubercontent.com/phanuwat3955/wgt-bank/master/ajuda.sh -O / bin / ajuda
-	chmod + x / bin / ajuda
-	wget https://raw.githubercencontent.com/phanuwat3955/wgt-bank/master/sshmonitor2.sh -O / bin / sshmonitor
-	chmod + x / bin / sshmonitor
+  service ssh restart
+	service squid3 restart
   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""
     wget -q http://bigbolgames.com/viperx/squid2/squidconf.sh -O /bin/squidconf
 	chmod +x /bin/squidconf
@@ -485,18 +433,7 @@ cd /etc/squid/
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Por favor insira a senha para o usuario padrao do Proxy Auth " ; tput sgr0 ; echo ""
 	htpasswd -c /etc/squid/local squid
 	clear
-  if [ ! -f "/etc/init.d/squid" ]
-	then
-		service squid reload > /dev/null
-	else
-		/etc/init.d/squid reload > /dev/null
-	fi
-	if [ ! -f "/etc/init.d/ssh" ]
-	then
-		service ssh reload > /dev/null
-	else
-		/etc/init.d/ssh reload > /dev/null
-	fi
+        fi
 fi
 echo ""
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "หากต้อง การล็อกอิน พร็อกซีของคุณ o ให้ใช้การ เข้าสู่ระบบ ปลาหมึกและรหัสผ่าน ทีคุณกำหนดคาไว้ในการติดตั้ง" ; tput sgr0
