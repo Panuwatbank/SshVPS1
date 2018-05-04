@@ -4,20 +4,20 @@ echo ""
 echo ""
 echo ""
 echo ""          
-tput setaf 6 ; echo ".     I\\///                         * X   ll   X  \\    //" ; tput sgr0
-tput setaf 6 ; echo ".  //|\   ||.  //||||\\   ||||||||         /  * ||  ||  ||   \\  //" ; tput sgr0
-tput setaf 6 ; echo "   ||||   ||  ||     ||         ||      ------             * ||  ||  ||    \\//" ; tput sgr0
-tput setaf 6 ; echo "     ||   ||         ||   ||||  ||         ||        * ||  ||  ||     ||" ; tput sgr0
-tput setaf 6 ; echo ".  //||\\ ||         ||   ||//  ||       ||      ||         *  | //\\ |      || " ; tput sgr0
-tput setaf 6 ; echo "  || || \\||         ||   ||    ||     ||||||||  ||       ||        *   X    X       || " ; tput sgr0 
-tput setaf 6 ; echo "     ||   ||.        ||   ||||||||       tput sgr0 
+tput setaf 6 ; echo "      ||\//                                                            " ; tput sgr0
+tput setaf 6 ; echo "   //\\   ||  //||||\\    ||||||||   //||||\\  |||\\ //  /|||||\       " ; tput sgr0
+tput setaf 6 ; echo "   \\||   || ||      ||         ||  ||     ||  |||// \\ ||     ||      " ; tput sgr0
+tput setaf 6 ; echo "     ||   ||         ||   ||||  ||         ||    ||   ||       ||      " ; tput sgr0
+tput setaf 6 ; echo "   //||\\ ||         ||   ||//  ||         ||    ||   ||       ||      " ; tput sgr0
+tput setaf 6 ; echo "  || || \\||         ||   ||    ||         ||    ||   ||       ||      " ; tput sgr0 
+tput setaf 6 ; echo "   \\||   ||         ||   ||||||||         ||    |||//||       ||      " ; tput sgr0 
 ""echo
-tput setaf 5 ; echo "    XX    XX        X  XXXX   XXXXXXXX" ; tput sgr0
-tput setaf 5 ; echo "     XX  XX        X  XX XX   X    X X" ; tput sgr0
-tput setaf 5 ; echo "       XX         X  XX  XX   X   X  X" ; tput sgr0
-tput setaf 5 ; echo "     XX  XX      X       XX   X  X   X" ; tput sgr0
-tput setaf 5 ; echo "    XX    XX    X        XX   X X    X" ; tput sgr0
-tput setaf 5 ; echo "   XX      XX  X         XX O XXXXXXXX" ; tput sgr0
+tput setaf 5 ; echo "  X   ll   X  \\    //  XX      XX       X  XXXX   XXXXXXXX" ; tput sgr0
+tput setaf 5 ; echo "  ||  ||  ||   \\  //     XX  XX        X  XX XX   X    X X" ; tput sgr0
+tput setaf 5 ; echo "  ||  ||  ||    \\//        XX         X  XX  XX   X   X  X" ; tput sgr0
+tput setaf 5 ; echo "  ||  /\  ||     ||       XX  XX      X       XX   X  X   X" ; tput sgr0
+tput setaf 5 ; echo "  || //\\ ||     ||      XX    XX    X        XX   X X    X" ; tput sgr0
+tput setaf 5 ; echo "   \\/  \//      ||     XX      XX  X         XX O XXXXXXXX" ; tput sgr0
 echo ""
 tput setaf 6 ; echo "ViperX 1.0 Installer is Loading Please Wait" ; tput sgr0
 tput setaf 6 ; echo "By ม้าอาชาคะนอง" ; tput sgr0
