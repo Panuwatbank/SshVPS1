@@ -108,10 +108,10 @@ if [ -f "/usr/sbin/ufw" ] ; then
 	ufw allow 143/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8000/tcp ; ufw allow 8080/tcp
 fi
 if [ -d "/etc/squid3/" ]
-   cd /etc/squid3/
-   mv squid.conf squid.confbak
+    cd /etc/squid3/
+    mv squid.conf squid.confbak
       wget-q https://raw.githubusercontent.com/phanuwat3955/BankSSH/master/squid3.conf -O squid.conf
-   cd /$USER
+      cd /$USER
       grep -v "^Port 143" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
       echo "Port 143" >> /etc/ssh/sshd_config
       echo "Banner /etc/bannerssh" >> /etc/ssh/sshd_config
@@ -120,33 +120,33 @@ if [ -d "/etc/squid3/" ]
       cd /$USER
       grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
       echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	service ssh restart
-	service squid3 restart
-    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""
-    wget -q http://bigbolgames.com/viperx/squid/squidconf.sh -O /bin/squidconf
+      service ssh restart
+      service squid3 restart
+   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""
+      wget -q http://bigbolgames.com/viperx/squid/squidconf.sh -O /bin/squidconf
 	chmod +x /bin/squidconf
 	dos2unix /bin/squidconf
-    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Squid Auth Installed " ; tput sgr0 ; echo ""
+   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Squid Auth Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/alterarsenha.sh -O /bin/alterarsenha
 	chmod +x /bin/alterarsenha
 	dos2unix /bin/alterarsenha
-    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Password Installed " ; tput sgr0 ; echo ""
+   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Password Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/criarusuario2.sh -O /bin/criarusuario
 	chmod +x /bin/criarusuario
 	dos2unix /bin/criarusuario
-    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Create user Installed " ; tput sgr0 ; echo ""
+   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Create user Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
 	dos2unix /bin/expcleaner
-    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Clear Expired Users Installed " ; tput sgr0 ; echo ""
+   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Clear Expired Users Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
 	dos2unix /bin/mudardata
-    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Date Installed" ; tput sgr0 ; echo ""
+   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Date Installed" ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/remover.sh -O /bin/remover
 	chmod +x /bin/remover
 	dos2unix /bin/remover
-    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Remove Users Installed" ; tput sgr0 ; echo ""
+   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Remove Users Installed" ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
 	dos2unix /bin/sshlimiter
@@ -172,7 +172,7 @@ if [ -d "/etc/squid3/" ]
 	mv speedtest.py /etc/penguin
 	chmod +x /etc/penguin/speedtest.py
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Speed Test Python Configured " ; tput sgr0 ; echo ""
-    wget -q http://bigbolgames.com/viperx/panel/usuarioteste.sh -O /bin/usuarioteste
+        wget -q http://bigbolgames.com/viperx/panel/usuarioteste.sh -O /bin/usuarioteste
 	chmod +x /bin/usuarioteste
 	dos2unix /bin/usuarioteste
         tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo User Temp Installed " ; tput sgr0 ; echo ""
