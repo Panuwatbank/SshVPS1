@@ -4,12 +4,12 @@ echo ""
 echo ""
 echo ""
 echo ""
-tput setaf 6 ; echo "||          ||  ||  ||------   ||||||||  ||------    " ; tput sgr0
-tput setaf 6 ; echo " ||        ||       ||      /  ||        ||      /   " ; tput sgr0
-tput setaf 6 ; echo "  ||      ||    ||  ||------   ||||||||  ||------    " ; tput sgr0
-tput setaf 6 ; echo "   ||    ||     ||  ||         ||        ||     ||   " ; tput sgr0
-tput setaf 6 ; echo "    ||  ||      ||  ||         ||        ||      ||  " ; tput sgr0
-tput setaf 6 ; echo "      ||        ||  ||         ||||||||  ||       || " ; tput sgr0
+tput setaf 6 ; echo "||       II       ||   ||        ||  ||||||||| ------    " ; tput sgr0
+tput setaf 6 ; echo " ||      II      ||     ||      ||   ||     ||       ||      /   " ; tput sgr0
+tput setaf 6 ; echo "  ||     II     ||        ||  ||     ||    //    " ; tput sgr0
+tput setaf 6 ; echo "   ||    ||    ||           ||       ||||||||| " ; tput sgr0
+tput setaf 6 ; echo "    ||  |  |  ||            ||       ||     ||   " ; tput sgr0
+tput setaf 6 ; echo "     |||    |||             ||       |||||||||  |||||  ||       || " ; tput sgr0
 echo ""
 tput setaf 5 ; echo "    XX    XX        X  XXXX   XXXXXXXX" ; tput sgr0
 tput setaf 5 ; echo "     XX  XX        X  XX XX   X    X X" ; tput sgr0
