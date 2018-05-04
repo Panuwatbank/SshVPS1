@@ -5,13 +5,13 @@ echo ""
 echo ""
 echo ""          
 tput setaf 6 ; echo "      ||\//                                                            " ; tput sgr0
-tput setaf 6 ; echo "   //\\   ||  //||||\\    ||||||||   //||||\\  |||\\ //  /|||||\       " ; tput sgr0
-tput setaf 6 ; echo "   \\||   || ||      ||         ||  ||     ||  |||// \\ ||     ||      " ; tput sgr0
-tput setaf 6 ; echo "     ||   ||         ||   ||||  ||         ||    ||   ||       ||      " ; tput sgr0
-tput setaf 6 ; echo "   //||\\ ||         ||   ||//  ||         ||    ||   ||       ||      " ; tput sgr0
-tput setaf 6 ; echo "  || || \\||         ||   ||    ||         ||    ||   ||       ||      " ; tput sgr0 
-tput setaf 6 ; echo "   \\||   ||         ||   ||||||||         ||    |||//||       ||      " ; tput sgr0 
-""echo
+tput setaf 6 ; echo "   //\\   ||  //||||||\   ||||||||   /||||||\  |||\\  //   /||||||\       " ; tput sgr0
+tput setaf 6 ; echo "   \\||   || ||      ||         ||  ||     ||  |||//  \\  ||     ||      " ; tput sgr0
+tput setaf 6 ; echo "     ||   ||         ||   ||||  ||         ||    ||   ||         ||      " ; tput sgr0
+tput setaf 6 ; echo "   //||\\ ||         ||   ||//  ||         ||    ||   ||         ||      " ; tput sgr0
+tput setaf 6 ; echo "  || || \\||         ||   ||    ||         ||    ||   ||         ||      " ; tput sgr0 
+tput setaf 6 ; echo "   \\||   ||         ||   ||||||||         ||    |||||||         ||      " ; tput sgr0 
+echo ""
 tput setaf 5 ; echo "  X   ll   X  \\    //  XX      XX       X  XXXX   XXXXXXXX" ; tput sgr0
 tput setaf 5 ; echo "  ||  ||  ||   \\  //     XX  XX        X  XX XX   X    X X" ; tput sgr0
 tput setaf 5 ; echo "  ||  ||  ||    \\//        XX         X  XX  XX   X   X  X" ; tput sgr0
@@ -108,49 +108,50 @@ if [ -f "/usr/sbin/ufw" ] ; then
 	ufw allow 143/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8000/tcp ; ufw allow 8080/tcp
 fi
 if [ -d "/etc/squid3/" ]
+then
     cd /etc/squid3/
     mv squid.conf squid.confbak
-      wget-q https://raw.githubusercontent.com/phanuwat3955/BankSSH/master/squid3.conf -O squid.conf
-      cd /$USER
-      grep -v "^Port 143" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
-      echo "Port 143" >> /etc/ssh/sshd_config
-      echo "Banner /etc/bannerssh" >> /etc/ssh/sshd_config
-      cd /etc/
-      wget -q https://raw.githubusercontent.com/phanuwat3955/BankSSH/master/bannerssh
-      cd /$USER
-      grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
-      echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-      service ssh restart
-      service squid3 restart
-   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""
-      wget -q http://bigbolgames.com/viperx/squid/squidconf.sh -O /bin/squidconf
+	wget -q http://raw.githubusercontent.com/phanuwat3955/BankSSH/master/squid3.conf -O squid.conf
+	cd /$USER
+	grep -v "^Port 143" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
+	echo "Port 143" >> /etc/ssh/sshd_config
+	echo "Banner /etc/bannerssh" >> /etc/ssh/sshd_config
+	cd /etc/
+	wget -q https://raw.githubusercontent.com/phanuwat3955/BankSSH/master/bannerssh
+	cd /$USER
+	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
+	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+	service ssh restart
+	service squid3 restart
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""
+    wget -q http://bigbolgames.com/viperx/squid/squidconf.sh -O /bin/squidconf
 	chmod +x /bin/squidconf
 	dos2unix /bin/squidconf
-   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Squid Auth Installed " ; tput sgr0 ; echo ""
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Squid Auth Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/alterarsenha.sh -O /bin/alterarsenha
 	chmod +x /bin/alterarsenha
 	dos2unix /bin/alterarsenha
-   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Password Installed " ; tput sgr0 ; echo ""
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Password Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/criarusuario2.sh -O /bin/criarusuario
 	chmod +x /bin/criarusuario
 	dos2unix /bin/criarusuario
-   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Create user Installed " ; tput sgr0 ; echo ""
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Create user Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
 	dos2unix /bin/expcleaner
-   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Clear Expired Users Installed " ; tput sgr0 ; echo ""
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Clear Expired Users Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
 	dos2unix /bin/mudardata
-   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Date Installed" ; tput sgr0 ; echo ""
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Date Installed" ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/remover.sh -O /bin/remover
 	chmod +x /bin/remover
 	dos2unix /bin/remover
-   tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Remove Users Installed" ; tput sgr0 ; echo ""
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Remove Users Installed" ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
 	dos2unix /bin/sshlimiter
-        tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo SSh Limiter Installed " ; tput sgr0 ; echo ""
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo SSh Limiter Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/sh/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
 	dos2unix /bin/alterarlimite
@@ -172,10 +173,10 @@ if [ -d "/etc/squid3/" ]
 	mv speedtest.py /etc/penguin
 	chmod +x /etc/penguin/speedtest.py
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Speed Test Python Configured " ; tput sgr0 ; echo ""
-        wget -q http://bigbolgames.com/viperx/panel/usuarioteste.sh -O /bin/usuarioteste
+    wget -q http://bigbolgames.com/viperx/panel/usuarioteste.sh -O /bin/usuarioteste
 	chmod +x /bin/usuarioteste
 	dos2unix /bin/usuarioteste
-        tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo User Temp Installed " ; tput sgr0 ; echo ""
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo User Temp Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/panel/banner.sh -O /bin/banner
 	chmod +x /bin/banner
 	dos2unix /bin/banner
@@ -187,7 +188,7 @@ if [ -d "/etc/squid3/" ]
 	wget -q http://bigbolgames.com/viperx/panel/updatepack.sh -O /bin/updatepack
 	chmod +x /bin/updatepack
 	dos2unix /bin/updatepack
-        tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Update Manager Installed " ; tput sgr0 ; echo ""
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Update Manager Installed " ; tput sgr0 ; echo ""
 	wget -q http://bigbolgames.com/viperx/panel/firewallblock.sh -O /bin/firewallblock
 	chmod +x /bin/firewallblock
 	dos2unix /bin/firewallblock
@@ -261,17 +262,18 @@ if [ -d "/etc/squid3/" ]
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo HTOP Panel Instalado" ; tput sgr0 ; echo ""
 	panel
 	clear
-        wget -q http://bigbolgames.com/viperx/panel/viperx.sh -O /bin/viperx
+    wget -q http://bigbolgames.com/viperx/panel/viperx.sh -O /bin/viperx
 	chmod +x /bin/viperx
 	dos2unix /bin/viperx
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo ViperX Instalado " ; tput sgr0 ; echo ""
 	echo ""
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Por favor insira a senha para o usuario padrao do Proxy Auth " ; tput sgr0 ; echo ""
 	htpasswd -c /etc/squid3/passwd squid
+	clear
 fi
 if [ -d "/etc/squid/" ]
 then
-cd /etc/squid/
+    cd /etc/squid/
     mv squid.conf squid.confbak
 	wget -q https://raw.githubusercontent.com/phanuwat3955/BankSSH/master/squid.conf -O squid.conf
 	cd /$USER
@@ -282,12 +284,12 @@ cd /etc/squid/
 	echo "Banner /etc/bannerssh" >> /etc/ssh/sshd_config
 	cd /etc/
 	wget -q https://raw.githubusercontent.com/phanuwat3955/BankSSH/master/bannerssh
-	cd /$USER
-    grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
-	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-  service ssh restart
-	service squid3 restart
-  tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""
+	service ssh restart
+	service squid restart
+	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""wget -q http://bigbolgames.com/viperx/squid2/squidconf.sh -O /bin/squidconf
+	chmod +x /bin/squidconf
+	dos2unix /bin/squidconf
+    tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""
     wget -q http://bigbolgames.com/viperx/squid2/squidconf.sh -O /bin/squidconf
 	chmod +x /bin/squidconf
 	dos2unix /bin/squidconf
@@ -434,13 +436,12 @@ cd /etc/squid/
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Por favor insira a senha para o usuario padrao do Proxy Auth " ; tput sgr0 ; echo ""
 	htpasswd -c /etc/squid/local squid
 	clear
-        fi
 fi
 echo ""
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "หากต้อง การล็อกอิน พร็อกซีของคุณ o ให้ใช้การ เข้าสู่ระบบ ปลาหมึกและรหัสผ่าน ทีคุณกำหนดคาไว้ในการติดตั้ง" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "ถ้าคุณต้องการ ปิดใช้งานพร็อกซี การรับรองความถูกต้อง โปรดไปที่ตัวเลือก 5 ในแผงตัวจัดการ VPS" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "O SSH limiter por padrao vem desabilitado, para abilitar ele selecione a opção 6 no painel" ; tput sgr0
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "หนังสือมอบฉันทะ ปลาหมึก install e rodando ใน พอร์ต: 81 8080 8000 3128" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "หนังสือมอบฉันทะ ปลาหมึก ติดตั้ง ติดตั้ง e rodando ใน พอร์ต: 80 8080 8000 3128" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "OpenSSH วิ่ง ใน พอร์ต 22 e 143" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Scripts para gerenciamento de usuário instalados" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Para acessar o painel de gerenciamento use o comando: panel" ; tput sgr0
