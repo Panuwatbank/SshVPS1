@@ -242,7 +242,7 @@ tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Mod
 	cd /$USER 
 	mkdir arquivosopenvpn
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo de OpenVPn Com Validade Instalado" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/vpnauth.sh -O /bin/vpnauth
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/vpnauth.sh -O /bin/vpnauth
 	chmod +x /bin/vpnauth
 	dos2unix /bin/vpnauth
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo de OpenVPn Com Validade e Proxy Auth Instalado" ; tput sgr0 ; echo ""
@@ -261,7 +261,7 @@ tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Mod
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo HTOP Panel Instalado" ; tput sgr0 ; echo ""
 	panel
 	clear
-    wget -q http://bigbolgames.com/viperx/panel/viperx.sh -O /bin/viperx
+    wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/viperx.sh -O /bin/viperx
 	chmod +x /bin/viperx
 	dos2unix /bin/viperx
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo ViperX Instalado " ; tput sgr0 ; echo ""
