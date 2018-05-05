@@ -4,12 +4,12 @@ echo ""
 echo ""
 echo ""
 echo ""
-tput setaf 6 ; echo "||       II       ||   ||        ||  ||||||||| ------    " ; tput sgr0
-tput setaf 6 ; echo " ||      II      ||     ||      ||   ||     ||       ||      /   " ; tput sgr0
-tput setaf 6 ; echo "  ||     II     ||        ||  ||     ||    //    " ; tput sgr0
-tput setaf 6 ; echo "   ||    ||    ||           ||       ||||||||| " ; tput sgr0
-tput setaf 6 ; echo "    ||  |  |  ||            ||       ||     ||   " ; tput sgr0
-tput setaf 6 ; echo "     |||    |||             ||       |||||||||  |||||  ||       || " ; tput sgr0
+tput setaf 6 ; echo "||       II       ||   ||        ||  |||||||||      ||       ||     ||  ||     || " ; tput sgr0
+tput setaf 6 ; echo " ||      II      ||     ||      ||   ||     ||     ||||      ||||   ||  ||    || " ; tput sgr0
+tput setaf 6 ; echo "  ||     II     ||        ||  ||     ||    //     ||  ||     || ||  ||  ||||||| " ; tput sgr0
+tput setaf 6 ; echo "   ||    ||    ||           ||       |||||||\    ||    ||    ||  || ||  ||   ||" ; tput sgr0
+tput setaf 6 ; echo "    ||  |  |  ||            ||       ||     ||  ||||||||||   ||   ||||  ||    ||" ; tput sgr0
+tput setaf 6 ; echo "     |||    |||             ||       ||||||||| ||        ||  ||     ||  ||     ||" ; tput sgr0
 echo ""
 tput setaf 5 ; echo "    XX    XX        X  XXXX   XXXXXXXX" ; tput sgr0
 tput setaf 5 ; echo "     XX  XX        X  XX XX   X    X X" ; tput sgr0
@@ -123,88 +123,88 @@ then
 	service ssh restart
 	service squid3 restart
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Modulos Por Favor Aguarde " ; tput sgr0 ; echo ""
-    wget -q http://bigbolgames.com/viperx/squid/squidconf.sh -O /bin/squidconf
+    wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/squidconf.sh -O /bin/squidconf
 	chmod +x /bin/squidconf
 	dos2unix /bin/squidconf
     tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Squid Auth Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/alterarsenha.sh -O /bin/alterarsenha
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/alterarsenha.sh -O /bin/alterarsenha
 	chmod +x /bin/alterarsenha
 	dos2unix /bin/alterarsenha
     tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Password Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/criarusuario2.sh -O /bin/criarusuario
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/criarusuario2.sh -O /bin/criarusuario
 	chmod +x /bin/criarusuario
 	dos2unix /bin/criarusuario
     tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Create user Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/expcleaner2.sh -O /bin/expcleaner
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
 	dos2unix /bin/expcleaner
     tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Clear Expired Users Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/mudardata.sh -O /bin/mudardata
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
 	dos2unix /bin/mudardata
     tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Date Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/remover.sh -O /bin/remover
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/remover.sh -O /bin/remover
 	chmod +x /bin/remover
 	dos2unix /bin/remover
     tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Remove Users Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/sshlimiter2.sh -O /bin/sshlimiter
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
 	dos2unix /bin/sshlimiter
     tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo SSh Limiter Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/alterarlimite.sh -O /bin/alterarlimite
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
 	dos2unix /bin/alterarlimite
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Change Limit Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/panel.sh -O /bin/panel
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/panel.sh -O /bin/panel
 	chmod +x /bin/panel
 	dos2unix /bin/panel
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Panel Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/sshmonitor2.sh -O /bin/sshmonitor
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
 	dos2unix /bin/sshmonitor
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo SSH Monitor Installed " ; tput sgr0 ; echo ""
 	mkdir /etc/penguin > /dev/null
-	wget -q http://bigbolgames.com/viperx/py/speedtest.sh -O /bin/speedtest
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/speedtest.sh -O /bin/speedtest
 	chmod +x /bin/speedtest
 	dos2unix /bin/speedtest
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Speed Test Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/py/speedtest.py
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/speedtest.py
 	mv speedtest.py /etc/penguin
 	chmod +x /etc/penguin/speedtest.py
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Speed Test Python Configured " ; tput sgr0 ; echo ""
-    wget -q http://bigbolgames.com/viperx/panel/usuarioteste.sh -O /bin/usuarioteste
+    wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/usuarioteste.sh -O /bin/usuarioteste
 	chmod +x /bin/usuarioteste
 	dos2unix /bin/usuarioteste
     tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo User Temp Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/banner.sh -O /bin/banner
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/banner.sh -O /bin/banner
 	chmod +x /bin/banner
 	dos2unix /bin/banner
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Banner Set Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/systemdetails.sh -O /bin/systemdetails
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/systemdetails.sh -O /bin/systemdetails
 	chmod +x /bin/systemdetails
 	dos2unix /bin/systemdetails
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo System Details Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/updatepack.sh -O /bin/updatepack
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/updatepack.sh -O /bin/updatepack
 	chmod +x /bin/updatepack
 	dos2unix /bin/updatepack
     tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Update Manager Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/firewallblock.sh -O /bin/firewallblock
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/firewallblock.sh -O /bin/firewallblock
 	chmod +x /bin/firewallblock
 	dos2unix /bin/firewallblock
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Torrent Firewall Block Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/versao.sh -O /bin/versao
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/versao.sh -O /bin/versao
 	chmod +x /bin/versao
 	dos2unix /bin/versao
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Version Manager Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/limiter.sh -O /bin/limiter
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/limiter.sh -O /bin/limiter
 	chmod +x /bin/limiter
 	dos2unix /bin/limiter
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Panel Limiter Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/proxypanel.sh -O /bin/proxypanel
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/proxypanel.sh -O /bin/proxypanel
 	chmod +x /bin/proxypanel
 	dos2unix /bin/proxypanel
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Proxy Auth Change Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/badvpnsetup.sh -O /bin/badvpnsetup
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/badvpnsetup.sh -O /bin/badvpnsetup
 	chmod +x /bin/badvpnsetup
 	dos2unix /bin/badvpnsetup
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo BadVPNSetup Installed " ; tput sgr0 ; echo ""
@@ -212,19 +212,19 @@ tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Mod
 	chmod +x /bin/openvpnsetup
 	dos2unix /bin/openvpnsetup
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo OpenVPN Setup Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/tcptweaker.sh -O /bin/tcptweaker
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/tcptweaker.sh -O /bin/tcptweaker
 	chmod +x /bin/tcptweaker
 	dos2unix /bin/tcptweaker
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo TCP Twaker Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/userbackup.sh -O /bin/userbackup
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/userbackup.sh -O /bin/userbackup
 	chmod +x /bin/userbackup
 	dos2unix /bin/userbackup
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo User Backup Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/webmininstall.sh -O /bin/webmininstall
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/webmininstall.sh -O /bin/webmininstall
 	chmod +x /bin/webmininstall
 	dos2unix /bin/webmininstall
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo WEBMIN Installer Online " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/panel2.sh -O /bin/panel2
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/panel2.sh -O /bin/panel2
 	chmod +x /bin/panel2
 	dos2unix /bin/panel2
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Page 2 Panel Installed" ; tput sgr0 ; echo ""
