@@ -370,63 +370,63 @@ then
 	chmod +x /bin/proxypanel
 	dos2unix /bin/proxypanel
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Proxy Auth Change Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/badvpnsetup.sh -O /bin/badvpnsetup
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/badvpnsetup.sh -O /bin/badvpnsetup
 	chmod +x /bin/badvpnsetup
 	dos2unix /bin/badvpnsetup
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo BadVPNSetup Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/openvpnsetup.sh -O /bin/openvpnsetup
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/openvpnsetup.sh -O /bin/openvpnsetup
 	chmod +x /bin/openvpnsetup
 	dos2unix /bin/openvpnsetup
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo OpenVPN Setup Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/tcptweaker.sh -O /bin/tcptweaker
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/tcptweaker.sh -O /bin/tcptweaker
 	chmod +x /bin/tcptweaker
 	dos2unix /bin/tcptweaker
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo TCP Twaker Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/userbackup.sh -O /bin/userbackup
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/userbackup.sh -O /bin/userbackup
 	chmod +x /bin/userbackup
 	dos2unix /bin/userbackup
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo User Backup Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/webmininstall.sh -O /bin/webmininstall
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/webmininstall.sh -O /bin/webmininstall
 	chmod +x /bin/webmininstall
 	dos2unix /bin/webmininstall
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo WEBMIN Installer Online " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/panel2.sh -O /bin/panel2
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/panel2.sh -O /bin/panel2
 	chmod +x /bin/panel2
 	dos2unix /bin/panel2
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Page 2 Panel Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/automaticboot.sh -O /bin/automaticboot
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/automaticboot.sh -O /bin/automaticboot
 	chmod +x /bin/automaticboot
 	dos2unix /bin/automaticboot
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Automatic BOOT Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/uninstallvps.sh -O /bin/uninstallvps
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/uninstallvps.sh -O /bin/uninstallvps
 	chmod +x /bin/uninstallvps
 	dos2unix /bin/uninstallvps
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo de desinstalacao de nosso vps manager instalado com sucesso" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/vpntime.sh -O /bin/vpntime
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/vpntime.sh -O /bin/vpntime
 	chmod +x /bin/vpntime
 	dos2unix /bin/vpntime
 	cd /$USER 
 	mkdir arquivosopenvpn
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo de OpenVPn Com Validade Instalado" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/vpnauth.sh -O /bin/vpnauth
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/vpnauth.sh -O /bin/vpnauth
 	chmod +x /bin/vpnauth
 	dos2unix /bin/vpnauth
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo de OpenVPn Com Validade e Proxy Auth Instalado" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/userpassgenerator.sh -O /bin/userpassgenerator
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/userpassgenerator.sh -O /bin/userpassgenerator
 	chmod +x /bin/userpassgenerator
 	dos2unix /bin/userpassgenerator
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo UserPass.conf Generator Instalado" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/nloadpanel.sh -O /bin/nloadpanel
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/nloadpanel.sh -O /bin/nloadpanel
 	chmod +x /bin/nloadpanel
 	dos2unix /bin/nloadpanel
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Nload Panel Instalado" ; tput sgr0 ; echo ""
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo UserPass.conf Generator Instalado" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/hlemon.sh -O /bin/hlemon
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/hlemon.sh -O /bin/hlemon
 	chmod +x /bin/hlemon
 	dos2unix /bin/hlemon
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo HTOP Panel Instalado" ; tput sgr0 ; echo ""
 	clear
-	wget -q http://bigbolgames.com/viperx/panel/viperx.sh -O /bin/viperx
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/viperx.sh -O /bin/viperx
 	chmod +x /bin/viperx
 	dos2unix /bin/viperx
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo ViperX Instalado " ; tput sgr0 ; echo ""
