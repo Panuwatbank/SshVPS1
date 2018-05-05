@@ -208,7 +208,7 @@ tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Mod
 	chmod +x /bin/badvpnsetup
 	dos2unix /bin/badvpnsetup
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo BadVPNSetup Installed " ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/sh/openvpnsetup.sh -O /bin/openvpnsetup
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/openvpnsetup.sh -O /bin/openvpnsetup
 	chmod +x /bin/openvpnsetup
 	dos2unix /bin/openvpnsetup
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo OpenVPN Setup Installed " ; tput sgr0 ; echo ""
@@ -228,7 +228,7 @@ tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalando Mod
 	chmod +x /bin/panel2
 	dos2unix /bin/panel2
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Page 2 Panel Installed" ; tput sgr0 ; echo ""
-	wget -q http://bigbolgames.com/viperx/panel/automaticboot.sh -O /bin/automaticboot
+	wget -q https://raw.githubusercontent.com/Panuwatbank/SshVPS/master/automaticboot.sh -O /bin/automaticboot
 	chmod +x /bin/automaticboot
 	dos2unix /bin/automaticboot
 	tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Modulo Automatic BOOT Installed " ; tput sgr0 ; echo ""
